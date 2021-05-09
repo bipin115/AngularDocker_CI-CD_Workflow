@@ -5,7 +5,7 @@ pipeline {
             steps {
                 //Enable remote triggers
                 script {
-                    properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/bipin115/AngularDocker_CI-CD_Workflow.git/'], pipelineTriggers([pollSCM('* * * * *')])])
+                    properties([[$class: 'GithubProjectProperty', displayName: '', projectUrlStr: 'https://github.com/bipin115/AngularDocker_CI-CD_Workflow.git'], pipelineTriggers([pollSCM('* * * * *')])])
                 }  
             }
         }

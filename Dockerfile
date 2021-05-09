@@ -1,7 +1,6 @@
 FROM node:12.16.1-alpine As builder
 WORKDIR /app
 COPY ./SampleApp/package.json ./SampleApp/package-lock.json ./
-COPY ./SampleApp/package-lock.json ./
 RUN npm install -g @angular/cli
 RUN npm install
 COPY . .

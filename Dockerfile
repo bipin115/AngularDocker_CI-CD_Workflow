@@ -1,7 +1,9 @@
 FROM node:current-alpine As builder
 WORKDIR /app
 COPY ./SampleApp/package.json ./SampleApp/package-lock.json ./
-RUN ng update @angular/cli --migrate-only --from=1.4.7
+RUN npm uninstall -g @angular/cli
+RUN npm cache clean --force
+RUN npm install -g  @angular/cli@latest
 RUN npm install
 COPY . .
 RUN npm run build

@@ -1,9 +1,7 @@
 FROM node:current-alpine As builder
 WORKDIR /app
 COPY ./SampleApp/package.json ./SampleApp/package-lock.json ./
-RUN npm uninstall -g @angular/cli
-RUN npm cache clean --force
-RUN npm install -g  @angular/cli@latest
+RUN npm install -g @angular/cli
 RUN npm install
 COPY . .
 RUN ng build

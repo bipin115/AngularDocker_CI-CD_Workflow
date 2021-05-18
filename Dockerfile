@@ -3,7 +3,7 @@
 # We label our stage as ‘builder’
 FROM node:10-alpine as builder
 
-COPY ./SampleApp/package.json ./SampleApp/package-lock.json ./
+COPY ./SampleApp/package.json ./SampleApp/package-lock.json ./ng-app
 
 ## Storing node modules on a separate layer will prevent unnecessary npm installs at each build
 

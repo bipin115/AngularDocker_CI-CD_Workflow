@@ -6,7 +6,7 @@ RUN npm cache clean --force
 RUN npm install -g  @angular/cli@latest
 RUN npm install
 COPY . .
-RUN npm run build
+RUN ng build
 
 FROM nginx:current-alpine
 COPY --from=builder /app/dist/SampleApp/ /usr/share/nginx/html

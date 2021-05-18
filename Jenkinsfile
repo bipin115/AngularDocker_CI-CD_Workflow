@@ -45,7 +45,7 @@ pipeline {
      
       stage('Run Docker container') {
             steps {
-                sh "docker run --name angular_dockerwebapp -d -p 9090:8080 bipin115/angular_dockerwebapp"
+                sh "docker run --name angular_dockerwebapp -d -p 9090:4200 bipin115/angular_dockerwebapp"
             }
         }
     }

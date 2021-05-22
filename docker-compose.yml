@@ -1,8 +1,8 @@
 
-version: "3.9"
+version: "3"
 services:
    webapp:
-    build:
+    build: .
       dockerfile: Dockerfile
       args:
         NG_ENV: local
